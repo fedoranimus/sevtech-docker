@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Build and Deploy Docker
+      uses: pangzineng/Github-Action-One-Click-Docker@v1.1.1
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_NAMESPACE: ${{ secrets.DOCKER_NAMESPACE }}
