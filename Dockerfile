@@ -17,7 +17,7 @@ USER root
 # Creating user and downloading files
 RUN useradd -m -U minecraft && \
         mkdir -p /minecraft/world && \
-        wget -c https://www.curseforge.com/minecraft/modpacks/sevtech-ages/download/2788614 -O ftb.zip && \
+        wget -c https://media.forgecdn.net/files/2744/825/SevTech_Ages_Server_3.1.2.zip -O ftb.zip && \
         unzip ftb.zip && \
         rm ftb.zip && \
         chmod u+x Install.sh ServerStart.sh && \
